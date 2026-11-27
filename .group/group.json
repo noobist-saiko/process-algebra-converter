@@ -6,6 +6,10 @@
   "remote": "origin",
   "validation_commands": [
     [
+      "{python}",
+      "scripts/install_node_dependencies.py"
+    ],
+    [
       "node",
       "node_modules/typescript/bin/tsc",
       "-b",
