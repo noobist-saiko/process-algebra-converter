@@ -12,7 +12,7 @@ The project foundation is ready. It includes the React/TypeScript application sh
 
 - Git
 - Node.js 20 or newer
-- npm 10 or newer
+- pnpm 11.25.0
 - Python 3.10 or newer and groupctl for the collaboration workflow
 
 ## Setup
@@ -20,10 +20,11 @@ The project foundation is ready. It includes the React/TypeScript application sh
 ```bash
 git clone https://github.com/noobist-saiko/process-algebra-converter.git
 cd process-algebra-converter
-npm install
-npm test
-npm run build
-npm run dev
+npm install --global pnpm@11.25.0
+pnpm install --frozen-lockfile
+pnpm test
+pnpm run build
+pnpm run dev
 ```
 
 ## Project documents
@@ -72,9 +73,9 @@ SYNC -> implementation and local tests -> PUB -> independent REV -> INT -> TEST
 The initial project checks are:
 
 ```bash
-npm run typecheck
-npm test
-npm run build
+pnpm run typecheck
+pnpm test
+pnpm run build
 ```
 
 Do not claim parser or converter correctness until the official grammar, semantic conversion rules, and corresponding tests are present.
