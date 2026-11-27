@@ -1,0 +1,96 @@
+{
+  "protocol_version": "0.1",
+  "event_id": "E-20261127T080606Z-P17-d6e5064950",
+  "event_type": "change_published",
+  "group_id": "G01",
+  "person_id": "P17",
+  "created_at": "2026-11-27T08:06:06.529733Z",
+  "related_events": [],
+  "change_id": "C-P17-7bc140c278",
+  "branch": "people/P17/language-core",
+  "commit": "9c862570cf53a7a522df48649266b2028b1b1042",
+  "summary": "Implement provisional lexer, AST, parser, diagnostics, and tests for core process algebra syntax",
+  "base_commit": "88505d7abfddae5981c68cf1fb9374027aa04a82",
+  "files_changed": [
+    "docs/ast-specification.md",
+    "docs/grammar.md",
+    "groupctl-checks.json",
+    "scripts/install_node_dependencies.py",
+    "src/language/ast.ts",
+    "src/language/index.ts",
+    "src/language/lexer.ts",
+    "src/language/parser.ts",
+    "src/language/syntax-diagnostics.ts",
+    "src/language/token-types.ts",
+    "tests/lexer/lexer.test.ts",
+    "tests/parser/parser.test.ts"
+  ],
+  "interface_changes": [
+    "Adds the public src/language AST, lexer, token, diagnostic, and parseProgram APIs for Members B and C",
+    "Isolated validation now installs locked pnpm dependencies before typecheck, tests, and build"
+  ],
+  "tests_run": [
+    "[\"C:\\\\Users\\\\User\\\\.codex\\\\visualizations\\\\2026\\\\11\\\\27\\\\01a21baa-ec44-7643-9394-0a63cba484df\\\\process-algebra-converter\\\\.venv-groupctl\\\\Scripts\\\\python.exe\", \"scripts/install_node_dependencies.py\"]",
+    "[\"node\", \"node_modules/typescript/bin/tsc\", \"-b\", \"--pretty\", \"false\"]",
+    "[\"node\", \"node_modules/vitest/vitest.mjs\", \"run\"]",
+    "[\"node\", \"node_modules/vite/bin/vite.js\", \"build\"]"
+  ],
+  "known_issues": [
+    "The official course grammar is not yet available; identifier rules, line boundaries, precedence, and advanced constructs remain explicitly provisional"
+  ],
+  "proposed_for_integration": true,
+  "validation": {
+    "automated_result": "pass",
+    "results": [
+      {
+        "argv": [
+          "C:\\Users\\User\\.codex\\visualizations\\2026\\11\\27\\01a21baa-ec44-7643-9394-0a63cba484df\\process-algebra-converter\\.venv-groupctl\\Scripts\\python.exe",
+          "scripts/install_node_dependencies.py"
+        ],
+        "exit_code": 0,
+        "stdout": "✓ Lockfile passes supply-chain policies (verified 1h ago)\nLockfile is up to date, resolution step is skipped\nProgress: resolved 1, reused 0, downloaded 0, added 0\nPackages: +44\n++++++++++++++++++++++++++++++++++++++++++++\nPackages are hard linked from the content-addressable store to the virtual store.\n  Content-addressable store is at: C:\\Users\\User\\AppData\\Local\\pnpm\\store\\v11\n  Virtual store is at:             node_modules/.pnpm\nProgress: resolved 44, reused 44, downloaded 0, added 44, done\n\ndependencies:\n+ react 19.3.1\n+ react-dom 19.3.1\n\ndevDependencies:\n+ @types/react 19.3.3\n+ @types/react-dom 19.3.0\n+ @vitejs/plugin-react 6.3.0\n+ typescript 7.0.2\n+ vite 8.3.8\n+ vitest 5.1.2\n\nDone in 1.4s using pnpm v11.25.0\n",
+        "stderr": "",
+        "counts": null,
+        "evidence_state": "pass"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/typescript/bin/tsc",
+          "-b",
+          "--pretty",
+          "false"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "counts": null,
+        "evidence_state": "pass"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/vitest/vitest.mjs",
+          "run"
+        ],
+        "exit_code": 0,
+        "stdout": "\n RUN  v5.1.2 C:/Users/User/AppData/Local/Temp/groupctl-test-j0ct_b15/checkout\n\n\n Test Files  3 passed (3)\n      Tests  10 passed (10)\n   Start at  16:05:59\n   Duration  564ms (import 61%, transform 31%, tests 4%, worker 3%)\n\n",
+        "stderr": "",
+        "counts": null,
+        "evidence_state": "pass"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build"
+        ],
+        "exit_code": 0,
+        "stdout": "vite v8.3.8 building client environment for production...\ntransforming...\n✓ 17 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.55 kB │ gzip:  0.34 kB\ndist/assets/index-pIr7DWib.css    1.72 kB │ gzip:  0.85 kB\ndist/assets/index-DTbZPbae.js   221.45 kB │ gzip: 69.30 kB\n\n✓ built in 224ms\n",
+        "stderr": "",
+        "counts": null,
+        "evidence_state": "pass"
+      }
+    ]
+  }
+}
