@@ -1,0 +1,14 @@
+node_modules/
+.venv-groupctl/
+dist/
+coverage/
+.vite/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.group/local/
+*.groupctl-backup-*
+.DS_Store
+Thumbs.db
